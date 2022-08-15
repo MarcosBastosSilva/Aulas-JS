@@ -18,16 +18,14 @@
     </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area" onmouseenter="entrar()">
         interaja...
     </div>
     <script>
         var area = window.document.getElementById('area')
-        a.addEventListener('click' , clicar)
-        a.addEventListener('onmouseenter' , entrar)
-        a.addEventListener('onmouseout', sair)
+        area.addEventListener ('click', clicar)
+        area.addEventListener ('mouseout', saiu)
         
-
         function clicar() {
             area.innerText = 'Clicou!'
             area.style.background = 'green'
@@ -38,7 +36,7 @@
             area.style.background = 'yellow'
             area.style.color = 'green'
         }
-        function sair () {
+        function saiu () {
             area.innerText = 'Saiu!'
             area.style.background = 'blue'
             area.style.color = 'white'
