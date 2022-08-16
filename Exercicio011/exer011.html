@@ -28,8 +28,8 @@
             function confirmar(){
                 var nome = document.getElementById('nome').value
                 var pais = document.getElementById('nacio').value
-                pais = pais.toUpperCase()
                 var res = document.getElementById('res')
+                pais = pais.toUpperCase()
                 res.innerHTML = `<p>Bem-Vindo ${nome}!</p>`
                 if (pais == 'BRASIL'){
                     res.style.color = 'green'
