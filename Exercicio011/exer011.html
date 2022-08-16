@@ -1,112 +1,54 @@
 
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Fronteira</title>
-
     <style>
-
         body {
-
             font: normal 10pt Arial;
-
             text-align: center;
-
         }
-
         div#res {
-
             margin-top: 20px;
-
             font: normal 13pt Arial;
-
         }
-
     </style>
-
 </head>
-
     <body>
-
     <h1>Passagem para a Fronteira Brasileira</h1>
-
-    <h3>Preencha com seus dados pessoais:</h3>
-
-        Nome: <input type="text" name="nick" id="nick"><br><br>
-
-        Idade: <input type="number" name="idad" id="idad"><br><br>
-
+    <h2>Preencha com seus dados pessoais:</h2>
+        Nome: <input type="text" name="nome" id="nome"><br><br>
         País: <input type="text" name="nacio" id="nacio"><br><br>
-
-        <input type="button" value="Verificar" onclick="verificar()">
-
-        <input type="button" value="Limpar" onclick="reset()">
-
+        <input type="button" value="Confirmar" onclick="confirmar()">
+        <input type="button" value="Limpar" onclick="limpar()">
     <div id="res">Resultado</div>
-
         <script>
-
-            function verificar(){
-
-                var nome = document.getElementById('nick').value
-
-                var idade = Number(document.getElementById('idad').value)
-
+            function confirmar(){
+                var nome = document.getElementById('nome').value
                 var pais = document.getElementById('nacio').value
-
                 pais = pais.toUpperCase()
-
                 var res = document.getElementById('res')
-
                 res.innerHTML = `<p>Bem-Vindo ${nome}!</p>`
-
-                if (idade >= 18 && pais == 'BRASIL'){
-
+                if (pais == 'BRASIL'){
                     res.style.color = 'green'
-
-                    res.innerHTML += `<p><strong>SUA PASSAGEM FOI LIBERADA!</strong></p>`
-
+                    res.innerHTML += `<p><strong>Bem vindo! Você está permitido entrar no Brasil</strong></p>`
                 } else {
-
                     res.style.color = 'red'
-
-                    res.innerHTML += `<p><strong>SUA PASSAGEM FOI BLOQUEADA!</strong></p>`
-
+                    res.innerHTML += `<p><strong>Sinto muito, você não está permitido entrar no Brasil</strong></p>`
                 } 
-
             }
-
-            function reset(){
-
-                var reset1 = document.getElementById('nick')
-
-                var reset2 = document.getElementById('idad')
-
-                var reset3 = document.getElementById('nacio')
-
-                var reset4 = document.getElementById('res')
-
-                reset1.value = '';
-
-                reset2.value = '';
-
-                reset3.value = '';
-
-                reset4.innerHTML = 'Resultado';
-
-                reset4.style.color = 'black';
-
+            function limpar(){
+                    var limpar1 = document.getElementById('nome')
+                    var limpar2 = document.getElementById('nacio')
+                    var limpar3 = document.getElementById('res')
+                    limpar1.value = '';
+                    limpar2.value = '';
+                    limpar3.value = '';
+                    limpar3.innerHTML = 'Resultado';
+                    limpar3.style.color = 'black';
             }
-
         </script>
-
     </body>
-
 </html>
