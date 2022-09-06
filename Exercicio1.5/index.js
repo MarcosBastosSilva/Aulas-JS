@@ -47,5 +47,26 @@ const carro = {
 console.log(carro.completo())
 
 function eventoClick(){
-    alert("Acionou um evento de click")
+    //alert("Acionou um evento de click")
+    document.body.style.background = "yellow"
+}
+
+function viraVermelho(){
+    let div = document.getElementById("teste")
+    div.style.background = "red"
+}
+
+function viraAzul(){
+    let div = document.getElementById("teste")
+    div.style.background = "blue"
+}
+
+function mudou(){
+    console.log("mudou")
+}
+
+function teclaPressionada(){
+    let input = document.getElementById("campoTexto").value
+    console.log(input)
+    
 }
