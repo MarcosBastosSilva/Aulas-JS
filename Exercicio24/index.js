@@ -28,3 +28,6 @@ function buscarCEP(){
         document.getElementById("texto").innerHTML = "Cidade:" + cidade + " <br> Logradouro:" + logradouro + " <br> Estado:" + estado 
     }   
 }  
+
+
+

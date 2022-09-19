@@ -12,3 +12,7 @@ class Carro {
 const uno = new Carro("fiat", "uno", 2001)
 const gol = new Carro("Volkswagem", "gol",2007)
 console.log(uno)
+
+
+
+
